@@ -62,12 +62,35 @@ body {
 /* Card Section */
 .card {
   border: 1px solid #ccc;
-  padding: 16px;
-  border-radius: 8px;
+  padding: 20px; /* Increased from 16px */
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
-  margin: 20px;
+  margin: 15px;
+  font-size: 1.1rem; /* Slightly larger text */
+  min-height: 250px; /* Optional: makes card taller */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: makes it look bigger and elevated */
+  transition: transform 0.2s;
 }
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+.card-section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* exactly 2 cards per row */
+  gap: 10px;
+  padding: 20px;
+}
+
+/* Responsive: stack cards on smaller screens */
+@media (max-width: 768px) {
+  .card-section {
+    grid-template-columns: 1fr;
+  }
+}
+
 
 /* Footer */
 footer {
@@ -93,6 +116,36 @@ footer {
 .dark-mode .nav-links {
   background-color: #333;
 }
+/* Dark mode for gallery */
+.dark-mode .gallery-section {
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+}
+
+/* Dark mode for testimonials */
+.dark-mode .testimonial-section {
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+}
+
+.dark-mode .testimonial {
+  background-color: #2a2a2a;
+  color: #f0f0f0;
+}
+.dark-mode .countdown-section {
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+}
+
+body,
+.gallery-section,
+.testimonial-section,
+.testimonial,
+.countdown-section {
+  transition: background-color 0.3s, color 0.3s;
+}
+
+
 
 /* Gallery Section */
 .gallery-section {
