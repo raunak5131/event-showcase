@@ -1,7 +1,8 @@
 // Light/Dark Mode Toggle
-document.getElementById("toggle-btn").onclick = () => {
+document.getElementById("theme-toggle").addEventListener("change", function () {
   document.body.classList.toggle("dark-mode");
-};
+});
+
 
 // Menu Toggle for Mobile
 function toggleMenu() {
@@ -10,7 +11,7 @@ function toggleMenu() {
 
 // Countdown Timer
 const countdown = () => {
-  const eventDate = new Date("2025-07-10T00:00:00").getTime(); // Make sure this is in the future!
+  const eventDate = new Date("2025-08-20T00:00:00").getTime(); // Make sure this is in the future!
   const now = new Date().getTime();
   const gap = eventDate - now;
 
