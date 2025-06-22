@@ -1,3 +1,4 @@
+/* Base Styles */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -6,15 +7,59 @@ body {
   color: #000;
 }
 
+/* Navbar */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   background-color: #6200ea;
   color: white;
   padding: 10px 20px;
 }
 
+.nav-links {
+  display: flex;
+  gap: 15px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* Toggle Button for Mobile */
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* Responsive Navbar */
+@media (max-width: 600px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #6200ea;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
+/* Card Section */
 .card {
   border: 1px solid #ccc;
   padding: 16px;
@@ -24,12 +69,14 @@ body {
   margin: 20px;
 }
 
+/* Footer */
 footer {
   text-align: center;
   padding: 10px;
   background-color: #eee;
 }
 
+/* Dark Mode Styles */
 .dark-mode {
   background-color: #121212;
   color: #f0f0f0;
@@ -43,50 +90,11 @@ footer {
   background-color: #222;
 }
 
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  background-color: #6200ea;
-  color: white;
-  padding: 10px 20px;
+.dark-mode .nav-links {
+  background-color: #333;
 }
 
-.nav-links a {
-  margin: 0 10px;
-  color: white;
-  text-decoration: none;
-}
-
-.menu-toggle {
-  display: none;
-  font-size: 24px;
-  background: none;
-  border: none;
-  color: white;
-  cursor: pointer;
-}
-
-/* Responsive styles */
-@media (max-width: 600px) {
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    background-color: #6200ea;
-    text-align: center;
-  }
-
-  .nav-links.active {
-    display: flex;
-  }
-
-  .menu-toggle {
-    display: block;
-  }
-}
-
+/* Gallery Section */
 .gallery-section {
   padding: 40px 20px;
   background-color: #f9f9f9;
@@ -111,6 +119,8 @@ footer {
 .gallery img:hover {
   transform: scale(1.05);
 }
+
+/* Testimonial Section */
 .testimonial-section {
   background-color: #fff;
   padding: 40px 20px;
@@ -143,4 +153,3 @@ footer {
   font-weight: normal;
   color: #555;
 }
-
