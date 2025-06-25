@@ -345,8 +345,8 @@ input:checked + .slider-label {
 
 .card-icon {
   position: absolute;
-  bottom: 10px;
+  bottom: 5px;
   right: 1px;
-  width: 250px;
+  width: 200px;
   opacity: 1;
 }
