@@ -58,7 +58,38 @@ body {
   .menu-toggle {
     display: block;
   }
+
+  /* New changes to keep toggle switch next to menu on same line */
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+  }
+
+  .navbar > h1 {
+    font-size: 1.2rem;
+    white-space: nowrap;
+  }
+
+  .menu-toggle,
+  .toggle-switch {
+    margin-left: 10px;
+  }
+
+  .menu-toggle {
+    order: 1;
+  }
+
+  .toggle-switch {
+    order: 2;
+  }
+
+  .nav-links {
+    order: 3;
+  }
 }
+
 
 /* Card Section */
 .card {
@@ -354,8 +385,8 @@ input:checked + .slider-label {
 @media (max-width: 768px) {
 
   .card-icon {
-    width: 120px;
+    width: 150px;
     bottom: 5px;
-    right: 1px;
+    right: 5px;
   }
 }
