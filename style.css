@@ -352,14 +352,10 @@ input:checked + .slider-label {
 }
 /* Mobile adjustments */
 @media (max-width: 768px) {
-  .card {
-    font-size: 1rem;
-    padding-bottom: 100px; /* More padding for smaller screens */
-  }
 
   .card-icon {
-    width: 70px;
-    bottom: 8px;
-    right: 8px;
+    width: 120px;
+    bottom: 5px;
+    right: 1px;
   }
 }
