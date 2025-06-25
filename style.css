@@ -62,16 +62,18 @@ body {
 
 /* Card Section */
 .card {
+  position: relative; /* Required for absolute positioning inside */
   border: 1px solid #ccc;
-  padding: 20px; /* Increased from 16px */
+  padding: 20px;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   margin: 15px;
-  font-size: 1.1rem; /* Slightly larger text */
-  min-height: 250px; /* Optional: makes card taller */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: makes it look bigger and elevated */
+  font-size: 1.1rem;
+  min-height: 250px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s;
+  overflow: hidden;
 }
 
 .card:hover {
@@ -97,7 +99,7 @@ body {
 footer {
   text-align: center;
   padding: 10px;
-  background-color: #eee;
+  background-color: #e8e6e6;
 }
 
 /* Dark Mode Styles */
@@ -105,17 +107,20 @@ footer {
   background-color: #121212;
   color: #f0f0f0;
 }
+.dark-mode .card{
+  background-color: #333;
+}
 
 .dark-mode .navbar {
-  background-color: #333;
+  background-color: #0c0c0c;
 }
 
 .dark-mode footer {
-  background-color: #222;
+  background-color: #101010;
 }
 
 .dark-mode .nav-links {
-  background-color: #333;
+  background-color:#0c0c0c;
 }
 /* Dark mode for gallery */
 .dark-mode .gallery-section {
@@ -132,6 +137,9 @@ footer {
 .dark-mode .testimonial {
   background-color: #2a2a2a;
   color: #f0f0f0;
+}
+.dark-mode .testimonial:hover {
+  background-color: #0e0e0e;
 }
 .dark-mode .countdown-section {
   background-color: #1e1e1e;
@@ -153,6 +161,7 @@ body,
   padding: 40px 20px;
   background-color: #f9f9f9;
   text-align: center;
+ 
 }
 
 .gallery {
@@ -270,4 +279,74 @@ input:checked + .slider-label .circle {
 input:checked + .slider-label {
   background-color: #000000;
   border: 1px solid #ffffff;
+}
+
+.event-header {
+  text-align: center;
+  padding: 10px 20px 10px;
+  background-color: #f5f5f5;
+}
+
+.event-header h1 {
+  font-size: 2.5rem;
+  color: #6200ea;
+  margin-bottom: 10px;
+}
+
+.event-header p {
+  font-size: 1.2rem;
+  color: #333;
+}
+.about-event{
+  text-align: left;
+  background-color: #ffffff;
+  
+}
+.about-event h2{
+  position: relative;
+  background-color: #6200ea;
+  color: #ffffff;
+  text-align: left;
+  margin: 0px;
+  padding: 10px 30px 10px;
+
+}
+.about-event ul {
+  list-style-type: disc;
+  padding: 20px 40px;
+  margin: 0;
+}
+
+.about-event li {
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+.dark-mode .about-event{
+  background-color: #323232;
+  color: #fff;
+}
+.dark-mode .about-event h2{
+  background-color: #292929;
+  color: #fff;
+}
+/* Dark mode styles for event-header */
+.dark-mode .event-header {
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+}
+
+.dark-mode .event-header h1 {
+  color: #bb86fc;
+}
+
+.dark-mode .event-header p {
+  color: #ddd;
+}
+
+.card-icon {
+  position: absolute;
+  bottom: 10px;
+  right: 1px;
+  width: 250px;
+  opacity: 1;
 }

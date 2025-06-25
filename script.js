@@ -1,6 +1,18 @@
-// Light/Dark Mode Toggle
+// Apply dark mode on page load if previously enabled
+if (localStorage.getItem("darkMode") === "enabled") {
+  document.body.classList.add("dark-mode");
+  document.getElementById("theme-toggle").checked = true;
+}
+
+// Handle theme toggle change
 document.getElementById("theme-toggle").addEventListener("change", function () {
-  document.body.classList.toggle("dark-mode");
+  if (this.checked) {
+    document.body.classList.add("dark-mode");
+    localStorage.setItem("darkMode", "enabled");
+  } else {
+    document.body.classList.remove("dark-mode");
+    localStorage.setItem("darkMode", "disabled");
+  }
 });
 
 
