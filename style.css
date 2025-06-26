@@ -56,7 +56,8 @@ body {
   }
 
   .menu-toggle {
-    display: block;
+    display: flex;
+    margin-left: auto;
   }
 
   /* New changes to keep toggle switch next to menu on same line */
@@ -64,17 +65,18 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
+    padding: 10px 10px;
   }
 
   .navbar > h1 {
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     white-space: nowrap;
   }
 
-  .menu-toggle,
+
   .toggle-switch {
-    margin-left: 10px;
+    margin-left:2px !important;
   }
 
   .menu-toggle {
